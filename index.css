@@ -1,0 +1,131 @@
+:root {
+	box-sizing: border-box;
+	font-size: 15px;
+	--soft-violet: hsl(277, 64%, 61%);
+  }
+  
+  *, *::before, *::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+  }
+  
+  body {
+	font-family: 'Inter', sans-serif;
+	color: hsl(0, 0%, 100%);
+	background-color: hsl(233, 47%, 7%);
+	padding: 1em;
+	padding-top: 10vh;
+	display: grid;
+	place-content: center;
+	height: 100vh;
+  }
+  
+  h2 {
+	font-size: 1.5em;
+	margin-top: 1.5em;
+	margin-bottom: .5em;
+  }
+  
+  h2 span {
+	color: var(--soft-violet);
+  }
+  
+  article {
+	margin: 2.5em 0;
+	background-color: hsl(244, 38%, 16%);
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	border-radius: 0.5em;
+  }
+  
+  section {
+	padding: 0 1.5em;
+  }
+  
+  .image {
+	position: relative;
+	background-image: url();
+	background-size: cover;
+	height: 30vh;
+  }
+  
+  .image::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--soft-violet);
+	opacity: 0.5;
+  }
+  
+  .image, .image::before {
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+  }
+  
+  article > p {
+	 font-family: 'Lexend Deca', sans-serif;
+  }
+  
+  p {
+   color: hsla(0, 0%, 100%, 0.6);
+   margin: 1.5em 0;
+  }
+  
+  .stat {
+	color: hsla(0, 0%, 100%);
+	font-size: 1.5em;
+	font-weight: 700;
+  }
+  
+  .stat span {
+	color: hsla(0, 0%, 100%, 0.6);
+	margin: .3em 0;
+	font-size: .8rem;
+	font-weight: 400;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+  }
+  
+  @media (min-width: 700px) {
+  
+	h2 {
+	  font-size: 2em;
+	  margin-top: 1em;
+	}
+  
+	article {
+	  flex-direction: row-reverse;
+	  max-width: 1200px;
+	  text-align: left;
+	}
+  
+	.stats {
+	  display: flex;
+	  justify-content: space-between;
+	  margin-top: auto;
+	  margin-bottom: 1em;
+	}
+  
+	section {
+	  margin-right: 2em;
+	  display: flex;
+	  flex-direction: column;
+	  padding: 1em 3em;
+	  margin-right: 4em;
+	}
+  
+	.image, .image::before {
+	  flex: 1 0 50%;
+	  height: 100%;
+	  border-radius: 0;
+	  border-top-right-radius: 0.5em;
+	  border-bottom-right-radius: 0.5em;
+	}
+  
+  }
+  
